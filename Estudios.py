@@ -20,6 +20,7 @@ menutop1 = soup.find_all("div", {'id': "topmenu"})
 for i in menutop1:
     for li_item in i.find_all("li"):
         menutop += f"=> {li_item.text}\n"
+        
 
 # Display de estudios
 estudiostop = ""
@@ -39,8 +40,16 @@ socialmedia= ""
 socialmedia1 = soup.find("div", {"class": "social pull-right"})
 for social in socialmedia1.find_all('a'):
     socialmedia += "=>" + social['href']+ '\n'
-#### 
+
+
+#Count all <a> 
+
+ContadorA = soup.findAll('a')
+
+#### Prints 
 print("Navegación: \n", hrefnav)
 print("Items del menú: \n", menutop)
 print("Items de estudios: \n", estudiostop)
 print("Leftbar items: \n", leftbar)
+print("Social media links: \n" , socialmedia)
+print("Contador de <a>: " , str(len(ContadorA)))

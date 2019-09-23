@@ -171,15 +171,15 @@ Universidad Francisco Marroquín
 ## 1. Portal
 using ["http://ufm.edu/Portal"](http://ufm.edu/Portal)
 
-- [ ] GET the title and print it
-- [ ] GET the Complete Address of UFM
-- [ ] GET the phone number and info email
-- [ ] GET all item that are part of the upper nav menu (id: menu-table)
-- [ ] find all properties that have href (link to somewhere)
-- [ ] GET href of "UFMail" button
-- [ ] GET href "MiU" button.
-- [ ] get hrefs of all &lt;img>
-- [ ] count all &lt;a>
+- [x] GET the title and print it
+- [ x] GET the Complete Address of UFM
+- [x ] GET the phone number and info email
+- [ x] GET all item that are part of the upper nav menu (id: menu-table)
+- [ x] find all properties that have href (link to somewhere)
+- [ x] GET href of "UFMail" button
+- [ x] GET href "MiU" button.
+- [ x] get hrefs of all &lt;img>
+- [ x] count all &lt;a>
 
 
 ### 1.1 Extra points
@@ -202,23 +202,23 @@ using ["http://ufm.edu/Portal"](http://ufm.edu/Portal)
 ## 2. Estudios
 using ["http://ufm.edu/Estudios"](http://ufm.edu/Estudios)
 
-- [ ] now navigate to  /Estudios (better if you obtain href from the DOM)
-- [ ] display all items from "topmenu" (8 in total)
-- [ ] display ALL "Estudios" (Doctorados/Maestrias/Posgrados/Licenciaturas/Baccalaureus)
-- [ ] display from "leftbar" all &lt;li> items (4 in total)
-- [ ] get and display all available social media with its links (href) "class=social pull-right"
-- [ ] count all &lt;a> (just display the count)
+- [ x] now navigate to  /Estudios (better if you obtain href from the DOM)
+- [ x] display all items from "topmenu" (8 in total)
+- [ x] display ALL "Estudios" (Doctorados/Maestrias/Posgrados/Licenciaturas/Baccalaureus)
+- [ x] display from "leftbar" all &lt;li> items (4 in total)
+- [ x] get and display all available social media with its links (href) "class=social pull-right"
+- [ x] count all &lt;a> (just display the count)
 
 
 ## 3. CS
 using ["https://fce.ufm.edu/carrera/cs/"](https://fce.ufm.edu/carrera/cs/)
 
-- [ ] GET title
-- [ ] GET and display the href
+- [ x] GET title
+- [ x] GET and display the href
 - [ ] Download the "FACULTAD de CIENCIAS ECONOMICAS" logo. (you need to obtain the link dynamically)
-- [ ] GET following &lt;meta>: "title", "description" ("og")
-- [ ] count all &lt;a> (just display the count)
-- [ ] count all &lt;div> (just display the count)
+- [ x] GET following &lt;meta>: "title", "description" ("og")
+- [ x] count all &lt;a> (just display the count)
+- [ x] count all &lt;div> (just display the count)
 
 
 ## 4. Directorio
@@ -319,4 +319,4 @@ Put your Docker build/run/etc commands here
 - You will respond only with the URL of your git repo. (preferable git tags)
 - your name (username) MUST have commits in the git log.
 - it must compile & work!
-- READ all README.me first
+- READ all README.me firstS

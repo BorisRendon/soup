@@ -21,6 +21,12 @@ def compsci():
     print("3. Página Cs")
     Logo = soup.find("img", {"class": 'fl-photo-img wp-image-500 size-full' })
     strlogo = f"{Logo.get('src')}\n" 
+    #imgUrl = soup.find(href="https://fce.ufm.edu").find('img')['src']
+
+   # try:
+    #    urllib.request.urlretrieve(imgUrl, os.path.basename('FCE_logo.png'))
+    #except:
+    #    print("No se encontró la imagen")
 
     #  GET following <meta>: "title", "description" ("og")
     metatitle = ""

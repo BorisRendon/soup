@@ -38,6 +38,17 @@ def pages():
 
     contadorA = soup.findAll('a')
 
+
+    #1.1 extra points :) !
+    #with open('csv.csv', 'w') as csvfile:
+     #   escritor = csv.writer(csvfile, delimeter=',')
+#
+ #       for a in soup.findAll('a'):
+  #          texto = a.string
+   #         href = a['href']
+    #        escritor.writerow(f'{texto}', f'{href}')
+    #csvfile.close()
+
     print("BORIS RENDÓN")
     print("1. Portal")
     print("Titulo: \n", soup.title.string)

@@ -1,24 +1,48 @@
 #!/usr/bin/env python3
 from bs4 import BeautifulSoup
 import requests,sys,csv,json
+import datetime
+import sys
 
-url="http://ufm.edu/Portal"
-# Make a GET request to fetch the raw HTML content
-try:
-    html_content = requests.get(url).text
-except:
-    print(f"unable to get {url}")
-    sys.exit(1)
+def todos():
+	paso1()
+	paso2()
+	paso3()
+	paso4()
+	
+def paso1():
+	from paginas import pages
+	pages()
+	
+def paso2():
+	from Estudios import estuds
+	estuds()
+	
+def paso3():
+	from CS import compsci
+	compsci()
 
-# Parse the html content, this is the Magic ;)
-soup = BeautifulSoup(html_content, "html.parser")
+def paso4():
+	from Directorio import directory
+	directory()
 
-# print if needed, gets too noisy
-#print(soup.prettify())
 
-print(soup.title)
-print(soup.title.string)
+def main(args):
+    print(args)
+    if len(args) == 0:
+           todos()
+    elif args.__contains__("1"):
+        paso1()
+    elif args.__contains__("2"):
+        paso2() 
+    elif args.__contains__("3"):
+        paso3()
+    elif args.__contains__("4"):
+        paso4()
 
-for div in soup.find_all("div"):
-    print(div)
-    print("--------------------------")
+		
+if __name__ == "__main__":
+    main(sys.argv[1:])
+
+
+

@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests,sys,csv,json
 import urllib
+import shutil
 
 url =  "https://fce.ufm.edu/carrera/cs/"
 r = requests.get(url)
@@ -19,14 +20,14 @@ soup = BeautifulSoup(r.content, "html.parser")
 def compsci():
     print(" BORIS RENDÓN")
     print("3. Página Cs")
-    Logo = soup.find("img", {"class": 'fl-photo-img wp-image-500 size-full' })
-    strlogo = f"{Logo.get('src')}\n" 
-    #imgUrl = soup.find(href="https://fce.ufm.edu").find('img')['src']
-
-   # try:
-    #    urllib.request.urlretrieve(imgUrl, os.path.basename('FCE_logo.png'))
-    #except:
-    #    print("No se encontró la imagen")
+    logo1 = soup.find_all('a',href ="https://fce.ufm.edu")
+    for i in logo1:
+        fuente = i.find("img")['src']
+    r1 = requests.get(fuente,stream=True)
+    logo2= open('logo.jpg','wb')
+    r1.raw.decode_content = True
+    shutil.copyfileobj(r1.raw,logo2)
+   
 
     #  GET following <meta>: "title", "description" ("og")
     metatitle = ""
@@ -47,10 +48,9 @@ def compsci():
     #Prints
     print("Titulo CS: \n" , soup.title.string)
     #print("Href: \n" , href)
-    print("Logo FCE:\n" , strlogo)
+    print("Logo FCE guardado como logo.jpg:\n")
     print("Meta title:\n" ,metatitle)
     print("Meta Description:\n" , metaDescription)
     print("Contador de <a>:\n ", str(len(ContadorA)))
     print("Contador de <div>:\n", str(len(ContadorDiv)))
 
-compsci()
